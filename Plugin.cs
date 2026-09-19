@@ -37,12 +37,10 @@ namespace HsSkipPetEndScreen
     }
 
     /// <summary>
-    /// The end-of-game pet presentation is created by GameEntity.PetEndgameSpell, and the
-    /// end screen styles itself (blur, layout) via GameState.HasPetEndgame; both have
-    /// native no-pet paths that these patches select, so the end screen matches a petless
-    /// game exactly for both victory and defeat. A pet cutscene controller spawned for
-    /// the end screen is also kept from creating a pet object. Pet XP and level rewards
-    /// still accrue; only their popups are skipped. The in-game pet is not affected.
+    /// The two questions the pet ending hangs on, GameEntity.PetEndgameSpell and
+    /// GameState.HasPetEndgame, both have native no-pet paths these patches select, so the
+    /// end screen matches a petless game for win and loss alike. XP and rewards still
+    /// accrue; only their popups are skipped.
     /// </summary>
     public static class EndScreenPatches
     {
